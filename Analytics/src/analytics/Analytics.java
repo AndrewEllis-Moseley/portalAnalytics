@@ -38,7 +38,7 @@ public class Analytics extends Application {
             setPrimaryStage(primaryStage);
             stage = primaryStage;          
             sceneContent.gotoLogin();
-            stage.initStyle(StageStyle.UNDECORATED);
+//            stage.initStyle(StageStyle.UNDECORATED);
             stage.show();
         } catch (Exception ex) {
             Logger.getLogger(Analytics.class.getName()).log(Level.SEVERE, null, ex);

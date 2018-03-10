@@ -45,7 +45,7 @@
             <Button fx:id="queryBtn" layoutY="385.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="224.0" text="Query Builder" />
          </children>
       </AnchorPane>
-      <MenuButton alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="990.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ffffff;" text="" textFill="#24abef">
+      <MenuButton alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="990.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #ffffff;" text="" textFill="#24abef" AnchorPane.topAnchor="0.0">
          <items>
             <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#userLogout" text="Logout" />
          </items>
@@ -53,7 +53,7 @@
             <Font name="Wingdings 2" size="18.0" />
          </font>
       </MenuButton>
-      <AnchorPane fx:id="dashboardPane" focusTraversable="true" layoutX="224.0" layoutY="38.0" prefHeight="579.0" prefWidth="903.0">
+      <AnchorPane fx:id="dashboardPane" focusTraversable="true" layoutX="224.0" layoutY="38.0" prefHeight="579.0" prefWidth="903.0" AnchorPane.leftAnchor="224.0" AnchorPane.rightAnchor="-52.0">
          <children>
             <Label layoutX="9.0" layoutY="14.0" prefHeight="43.0" prefWidth="836.0" text="DASHBOARD                                                                          " underline="true">
                <font>
@@ -61,14 +61,14 @@
                </font>
             </Label>
             <PieChart layoutX="295.0" layoutY="350.0" prefHeight="215.0" prefWidth="259.0" title="Devices Count" />
-            <PieChart layoutX="14.0" layoutY="350.0" prefHeight="215.0" prefWidth="259.0" title="Error Count" />
+            <PieChart fx:id="errorCountPieChart" layoutX="14.0" layoutY="350.0" prefHeight="215.0" prefWidth="259.0" title="Error Count" />
             <PieChart layoutX="576.0" layoutY="350.0" prefHeight="215.0" prefWidth="259.0" title="Event Count" />
-            <LineChart layoutX="14.0" layoutY="112.0" prefHeight="178.0" prefWidth="389.0" title="Session count">
+            <LineChart fx:id="sessionCountLineChart" layoutX="14.0" layoutY="112.0" prefHeight="178.0" prefWidth="389.0" title="Session count">
               <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis fx:id="yAxis" side="LEFT" />
               </yAxis>
             </LineChart>
             <StackedBarChart layoutX="427.0" layoutY="112.0" prefHeight="178.0" prefWidth="408.0" title="Session per brand">
@@ -81,7 +81,7 @@
             </StackedBarChart>
          </children>
       </AnchorPane>
-      <Label fx:id="dateDisplay" layoutX="893.0" layoutY="11.0" text="1 MARCH 2018">
+      <Label fx:id="dateDisplay" layoutX="893.0" layoutY="11.0" text="1 MARCH 2018" AnchorPane.topAnchor="0.0">
          <font>
             <Font name="Rockwell" size="14.0" />
          </font>

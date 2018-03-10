@@ -24,23 +24,12 @@ import javafx.stage.Stage;
 
 public class LoginController extends AnchorPane implements Initializable {       
     
-    @FXML
-    private AnchorPane signInToggle, signInPane, requestAccessPane;
-
-    @FXML
-    private Label exit, errorMessage, submitMessage;
-
-    @FXML
-    private TextField username, firstname, surname, role, email;
-
-    @FXML
-    private PasswordField password;
-   
-    @FXML
-    private ToggleGroup loginPageToggle;
-     
-    @FXML
-    private ToggleButton requestToggleButton, signInToggleBtn;
+    @FXML   private AnchorPane signInToggle, signInPane, requestAccessPane;
+    @FXML   private Label exit, errorMessage, submitMessage;
+    @FXML   private TextField username, firstname, surname, role, email;
+    @FXML   private PasswordField password;
+    @FXML   private ToggleGroup loginPageToggle;
+    @FXML   private ToggleButton requestToggleButton, signInToggleBtn;
     
     private User loggedUser;
     private Analytics application;  
